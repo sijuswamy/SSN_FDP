@@ -1,0 +1,77 @@
+\documentclass[twoside]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{multicol}
+%\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{graphicx}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\linespread{1.05} % Line spacing - Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\usepackage[hmarginratio=1:1,top=20mm,columnsep=20pt,left=19mm]{geometry} % Document margins
+%\usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment - they need to be placed in specific locations with the [H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+\usepackage{float}
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}}
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[l]{\centering Assignemnt-1-- $\bullet$ 20MA 101 Linear Algebra \& Calculus $\bullet$ Module-3, Sh.No. 6} % Custom header text
+\fancyfoot[RO,LE]{\thepage} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{20pt}{15pt}\selectfont\textbf{Applications of Triple Integrals}} % Article title
+\author{
+	\large
+	\textsc{Faculty: Siju K.S.,Lekha Susan Jacob}\\
+	\normalsize {Date:04.02.2022--3$^{th}$hour.} \\ 
+	%\normalsize \href{mailto:siju.swamy@saintgits.org}{sijuswamy@gmail.com} % Your email address
+	\vspace{-5mm}
+}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+	
+	\maketitle % Insert title
+	
+	\thispagestyle{fancy} % All pages have headers and footers
+	\section{Workout the Following Problems}
+	\begin{enumerate}
+		\item Evaluate $\displaystyle \int\limits_0^1\int\limits_{-1}^{y^2}\int\limits_{-1}^zyzdxdzdy$
+		\item Evaluate $\displaystyle \int_0^1\int_{y^2}^1\int_0^{1-x}xdzdxdy$
+		\item Use triple integral find the volume of the solid in the first octant bounded by the coordinate planes and the  plane $3x+6y+4z=12$.
+		\item Evaluate $\displaystyle \iint\limits_G e^{2x+y-z}dV$ where $0\leq x\leq 1;\quad 0\leq y\leq \ln(3);\quad 0\leq z\leq \ln(2)$
+	\end{enumerate}
+	
+	%	REFERENCE LIST
+	%----------------------------------------------------------------------------------------
+	\begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
+		%\bibitem{one}Erwin Kreyszig,Advanced Engineering Mathematics,8Ed. Wiley, 2004.
+		%\bibitem{two}B.S.Grewal, Higher Engineering Mathematics,40Ed, Khanna Publications, 2010.
+		\bibitem{three} N.P.Bali, A.J.Geoge, A Textbook of Engineering Mathematics,3Ed, University Science Press, 2012
+	\end{thebibliography}
+	%----------------------------------------------------------------------------------------
+	
+	%\end{multicols}
+	
+\end{document}
