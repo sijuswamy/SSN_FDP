@@ -1,0 +1,222 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{qrcode}
+\usepackage{graphicx}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, bottom=2.00cm]{geometry}
+\makeindex
+\author{Anonymous}
+\title{Essentials of~\LaTeX~Typesetting }
+\date{}
+%document preamble
+\begin{document}
+	\maketitle
+%	\tableofcontents
+%	\listoffigures
+%	\listoftables
+%	\newpage
+%\section{A Brief History}
+%	\section{Introduction}
+%	Common tasks in writing an article are
+%\begin{enumerate}
+%		\item Type setting running text
+%		\item Creating enumerated list
+%		\item Creating bulleted list
+%		\item Inserting figures
+%		\item Inserting tables
+%		\item Type setting equations
+%		\item Setting bibliography
+%		\item Cross-referencing \& citation
+%	\end{enumerate}
+%\subsection{Type setting running text}\index{text formatting}
+%We can typeset the contents using a keyboard connected to the computer. A \TeX~editor like {\ttfamily{TeXstudio}} or cloud based free editors like {\ttfamily{Overleaf}} will be used for creating \LaTeX source code. \LaTeX~ support various languages. As we expected we can copy contents from various sources and paste it using the popular {\ttfamily{Ctrl+c}} and {\ttfamily{Ctrl+v}} commands.\\
+%
+%A running text can be aligned using {\em center}, {\em flushright} and {\em flushleft} environments. Following examples will illustrate this environments.\index{text environments}
+%\begin{verbatim}
+%\begin{center}
+%{\LARGE\bfseries{SAINTGITS College of Engineering, Kottayam}}\\
+%\small{An Autonomous Engineering College Under APJ Abdul Kalam Technological University\\
+% First Series B.Tech Degree Examinations, October 2020\\
+% {\bfseries Course: 20MAT101 Linear Algebra \& Calculus}\\
+% (Common to ALL branches)\\
+%\end{center}
+%Duration: Three hours\hfill Maximum marks: 100
+%\end{verbatim}
+%
+%The output of this code is:\\
+%\hrule
+%\begin{center}
+%	{\LARGE\bfseries{SAINTGITS College of Engineering, Kottayam}}\\
+%	\small{An Autonomous Engineering College Under APJ Abdul Kalam Technological University}\\
+%	First Series B.Tech Degree Examinations, October 2020\\
+%	{\bfseries Course: 20MAT101 Linear Algebra \& Calculus}\\
+%	(Common to ALL branches)
+%\end{center}
+%Duration: Three hours\hfill Maximum marks: 100\\
+%\hrule
+%\begin{verbatim}
+%\begin{flushright}
+%\Large{SAINTGITS College of Engineering, Kottayam}\\
+%\end{flushright}
+%\end{verbatim}
+%Output of this code is:
+%
+%\begin{flushright}
+%	\Large{SAINTGITS College of Engineering, Kottayam}
+%\end{flushright}
+%\begin{verbatim}
+%\begin{flushleft}
+%\Large\sc{SAINTGITS College of Engineering, Kottayam}
+%\end{flushleft}
+%\end{verbatim}
+%Output of this code is:
+%
+%\begin{flushleft}
+%	\Large\sc{SAINTGITS College of Engineering, Kottayam}
+%\end{flushleft}
+%\subsection{Creating enumerated list}
+%A sequentially incremented numbered list is called an enumeration. The environment for creating an enumerated list is:
+%\begin{verbatim}
+%\begin{enumerate}
+%\item  first item
+%\item second item
+%\item third item
+%\end{enumerate}
+%\end{verbatim}
+%Numbering system for enumeration is set as per international standards.
+%\subsection{Creating bulleted list}
+%A solid dot instead number is used in the case of bulleted list. The general environment for bulleted list is:
+%\begin{verbatim}
+%\begin{itemize}
+%\item first item
+%\item second item
+%\item third item
+%\end{itemize}
+%\end{verbatim}
+%Output of this code is given bellow:
+%\begin{itemize}
+%	\item first item
+%	\item second item
+%	\item third item
+%\end{itemize}
+%\subsection*{Creating QR codes}
+%A QR code can be created using \verb|\qrcode{content}| command. To use this command we have to include {\ttfamily qrcode} package in the document preamble. An example of QR code is:
+%\begin{verbatim}
+%\qrcode{http://www.saintgits.org}
+%\end{verbatim}
+%This command will create the following QR code.
+%
+%\qrcode{http://www.saintgits.org}
+%\subsection{Inserting figures}
+%	The following environment insert a figure in \LaTeX .
+%	\begin{verbatim*}
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=0.4\linewidth]{qrcodewebinar}
+%\caption{The QR code for Webinar 1}
+%\label{fig:qrcodewebinar1}
+%\end{figure}
+%\end{verbatim*}
+%Output of this code is given bellow:
+%	\begin{figure}[h]
+%		\centering
+%		\includegraphics[scale=0.9]{qrcodewebinar}
+%		\caption{The QR code for Webinar 1}
+%		\label{fig:qrcodewebinar1}
+%	\end{figure}
+%	
+%	This figure can be referred using \verb|\ref{fig:qrcodewebinar1}| command. This will create an automatic reference number as shown in Figure \ref{fig:qrcodewebinar1}.
+%	\subsection{Inserting tables}
+%	A table can be inserted using {\ttfamily table} environment. General syntax of a table is:
+%	\begin{verbatim}
+%	\begin{table}[h]
+%	\centering
+%	\caption{A sample Table}
+%	\label{tab:lebel_to_table}
+%	\begin{tabular}{|c|c|c|c|}\hline
+%	Sl.No&Column 1&Column 2& Column 3}\\\hline
+%1.& c(1,1)&c(1,2)&c(1,3)\\\hline
+%2.&c(2,1)&c(2,2)&c(2,3)\\\hline
+%	\end{tabular}
+%	\end{table}
+%	\end{verbatim}
+%	
+%Output of this code is given bellow:
+%\begin{table}[!htp]
+%	\centering
+%	\caption{A sample Table}
+%	\label{tab:lebel_to_table}
+%	\begin{tabular}{|c|c|c|c|}\hline
+%		Sl.No&Column 1&Column 2& Column 3\\\hline
+%	1.& c(1,1)&c(1,2)&c(1,3)\\\hline
+%	2.&c(2,1)&c(2,2)&c(2,3)\\\hline
+%\end{tabular}
+%\end{table}
+%This table can be referred using \verb|\ref{tab:lebel_to_table}| command. This reference will be shown as Table \ref{tab:lebel_to_table}.
+%\subsection{Typesetting equations}
+%Most important reason for using \LaTeX typesetting by the technical community is its wonderful power of generating equations and mathematical construct with high quality typeface. A running mathematical expression will be included  within dollar symbols (\$\$). For example, the source code \verb|$(x+y)^2=x^2+2xy+y^2$| will create the running equation- $(x+y)^2=x^2+2xy+y^2$. A centralized equation in a new line can be generated using double dollar delimiting as \verb|$$(x+y)^2=x^2+2xy+y^2$$|. Its output is $$(x+y)^2=x^2+2xy+y^2$$
+%
+%Numbered equations can be generated using the {\ttfamily equation} environment. The general syntax is:
+%\begin{verbatim}
+%\begin{equation}
+%(x+y)^2=x^2+2xy+y^2\label{eqn:1}
+%\end{equation}
+%\end{verbatim}
+%Output of this command will generate the following equation
+%\begin{equation}
+%(x+y)^2=x^2+2xy+y^2\label{eqn:1}
+%\end{equation}
+%
+%Using the \verb|\eqref{eqn:1}| command we can refer this equation. This command will create the reference as \eqref{eqn:1}.
+%Mathematical symbols are generated using \LaTeX~ macros. This macros are the English name of these symbols precedes by a backslash. For example the macro \verb|$\sin \theta$| generate the output $\sin\theta$.
+%
+%Aligned equations can be typeset using {\ttfamily align} environment. The general form of an aligned equation is:
+%\begin{verbatim}
+%\begin{align}
+%(\sin\theta+\cos\theta)^2&=\sin^2\theta+2\sin\theta\cos\theta+\cos^2\theta\\
+%&=1+2\sin\theta\cos\theta
+%\end{align}
+%\end{verbatim}
+%Output of this source code is
+%
+%\begin{align}
+%(\sin\theta+\cos\theta)^2&=\sin^2\theta+2\sin\theta\cos\theta+\cos^2\theta\nonumber\\
+%&=1+2\sin\theta\cos\theta
+%\end{align}
+%As a special case a multi valued function can be type set using {\ttfamily case} environment. An example code is given bellow.
+%\begin{verbatim}
+%$$f(x)=\begin{cases}
+%+x&;\quad x\geq 0\\
+%-x&;\quad x<0
+%\end{cases}$$
+%\end{verbatim}
+%
+%Output of this code is:
+%
+%$$f(x)=\begin{cases}
+%+x&;\quad x\geq 0\\
+%-x&;\quad x<0
+%\end{cases}$$
+%\subsection{Typesetting bibliography}
+%In \LaTeX~, bibliography can be typeset using the {\ttfamily thebibliography} environment. A sample is given bellow.
+%\begin{verbatim}
+%\begin{thebibliography}{99}
+%\bibitem{citekey1} reference 1
+%\bibitem{citekey2} reference 2
+%\bibitem{citekey3} reference 3
+%\end{thebibliography}
+%\end{verbatim}
+%Output of this code will generate the following output
+%
+%\begin{thebibliography}{99}
+%	\bibitem{book:lamort} Lamport, L. (1994). LATEX: a document preparation system: user's guide and reference manual. Addison-wesley.
+%	\bibitem{citekey2} reference 2
+%	\bibitem{citekey3} reference 3
+%\end{thebibliography}
+%
+%Usually the bibliography/ reference will appeared at the end of the document. A bibliography item (reference) can be cited using \verb|\cite{citekey}| command. As an example, reference 3 with citekey {\ttfamily citekey3} can be cited as \verb|citekey3|. This citation will be appeared in a square bracket as \cite{book:lamort}.
+%\printindex
+\end{document}
