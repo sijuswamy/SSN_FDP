@@ -1,0 +1,44 @@
+\documentclass[a4paper,10pt]{report}
+\usepackage{graphicx}
+\usepackage{index}%package for creating index page
+\makeindex
+\usepackage{lastpage}
+\usepackage{kpfonts}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+%setting chapter title style
+%Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
+\usepackage[Glenn]{fncychap}
+%setting page header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{SSN College of Engineering}
+\lhead{FDP}
+\rfoot{Page \thepage~ of~ \pageref{LastPage}}
+% to avoid hyphenation
+\tolerance=1
+	\emergencystretch=\maxdimen
+	\hyphenpenalty=10000
+	\hbadness=10000
+	\sloppy
+\title{Working with Bibliography}
+\author{ss}
+\renewcommand\bibname{Reference}%comment this line to get bibliography title "Bibliography"
+
+\begin{document}
+\maketitle
+\chapter{Introduction}
+A detailed view of reference \index{Machine learning} on R is available at \cite{bonaccorso2017machine}
+\newpage
+\section{A sample Section}
+A sample section can be created with the command \verb+\section{section name}+\index{Section naming}.
+\subsection{A Sample Subsection}
+
+% \nocite{*}% uncomment to show all references
+\bibliographystyle{IEEEtran}
+\bibliography{reference}
+\addcontentsline{toc}{chapter}{References}
+\newpage
+\printindex
+\end{document}
